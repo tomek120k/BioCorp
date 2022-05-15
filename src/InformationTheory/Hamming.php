@@ -6,7 +6,7 @@ use InvalidArgumentException;
 
 class Hamming
 {
-    public static function hammingDistance(string $strand1, string $strand2)
+    public static function hammingDistance(string $strand1, string $strand2): int
     {
         if (self::differentLength($strand1, $strand2))
             throw new StringAreNotEqual();
