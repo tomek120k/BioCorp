@@ -2,7 +2,9 @@
 
 namespace BioCorp\Genetics;
 
-class WrongNucleotide extends \ErrorException
+use ErrorException as ErrorExceptionAlias;
+
+class WrongNucleotide extends ErrorExceptionAlias
 {
 
 }

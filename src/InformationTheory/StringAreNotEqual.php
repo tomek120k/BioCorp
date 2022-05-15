@@ -2,7 +2,9 @@
 
 namespace BioCorp\InformationTheory;
 
-class StringAreNotEqual extends \InvalidArgumentException
+use InvalidArgumentException;
+
+class StringAreNotEqual extends InvalidArgumentException
 {
 
 }

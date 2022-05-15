@@ -3,6 +3,7 @@
 namespace Tests\Nucleotide;
 
 use BioCorp\Nucleotide;
+use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -57,13 +58,13 @@ class NucleotideTest extends TestCase
 
     public function testValidatesDna(): void
     {
-        $this->expectException(\InvalidArgumentException::class);
+        $this->expectException(InvalidArgumentException::class);
         Nucleotide::fromDna('JOHNYAPPLESEED');
     }
 
     public function testValidatesShortDna(): void
     {
-        $this->expectException(\InvalidArgumentException::class);
+        $this->expectException(InvalidArgumentException::class);
         Nucleotide::fromDna('JJ');
     }
 }
