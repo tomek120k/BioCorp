@@ -7,7 +7,7 @@ use PHPUnit\Framework\TestCase;
 
 /**
  * @covers \BioCorp\Hamming\Hamming
- * @covers \BioCorp\Genetics\Strand
+ * @covers \BioCorp\Genetics\DNAStrand
  * @covers \BioCorp\InformationTheory\Hamming
  */
 class HammingTest extends TestCase
@@ -82,5 +82,29 @@ class HammingTest extends TestCase
     {
         $this->expectException(InvalidArgumentException::class);
         Hamming::compute('ATA', 'AGTG');
+    }
+
+    public function testDisallowFirstStrandIncorrect(): void
+    {
+        $this->expectException(InvalidArgumentException::class);
+        Hamming::compute('XYZ', 'AGTG');
+    }
+
+    public function testDisallowSecondStrandIncorrect(): void
+    {
+        $this->expectException(InvalidArgumentException::class);
+        Hamming::compute('AGTG', 'XYZ');
+    }
+
+    public function testDisallowFirstShortStrandIncorrect(): void
+    {
+        $this->expectException(InvalidArgumentException::class);
+        Hamming::compute('X', 'T');
+    }
+
+    public function testDisallowSecondShortStrandIncorrect(): void
+    {
+        $this->expectException(InvalidArgumentException::class);
+        Hamming::compute('A', 'Y');
     }
 }

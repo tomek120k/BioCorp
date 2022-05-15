@@ -1,5 +1,5 @@
 infection:
-	XDEBUG_MODE=coverage vendor/bin/infection
+	XDEBUG_MODE=coverage vendor/bin/infection -s
 test:
 	vendor/bin/phpunit
 phpstan:
