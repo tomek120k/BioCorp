@@ -1,13 +1,14 @@
 <?php
-namespace Tests;
+namespace Tests\Hamming;
 
-use App\Hamming\Hamming;
+use BioCorp\Hamming\Hamming;
 use InvalidArgumentException;
 use PHPUnit\Framework\TestCase;
 
 /**
- * @covers \App\Hamming\Hamming
- * @covers \App\Genetics\Strand
+ * @covers \BioCorp\Hamming\Hamming
+ * @covers \BioCorp\Genetics\Strand
+ * @covers \BioCorp\InformationTheory\Hamming
  */
 class HammingTest extends TestCase
 {

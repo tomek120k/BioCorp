@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Genetics;
+namespace BioCorp\Genetics;
 
 class Strand
 {
@@ -29,5 +29,10 @@ class Strand
     public function nucleotidesChars(): array
     {
         return str_split($this->dnaStrand);
+    }
+
+    public function __toString(): string
+    {
+        return $this->dnaStrand;
     }
 }
