@@ -8,6 +8,7 @@ use PHPUnit\Framework\TestCase;
 /**
  * @covers \BioCorp\Nucleotide
  * @covers \BioCorp\DNAStrand
+ * @covers \BioCorp\Genetics\DNAStrand
  */
 class NucleotideTest extends TestCase
 {
