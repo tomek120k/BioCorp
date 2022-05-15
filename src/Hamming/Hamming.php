@@ -18,7 +18,7 @@ class Hamming
         $dna1 = new Strand($strand1);
         $dna2 = new Strand($strand2);
         try {
-            return InformationTheory::hammingDistance($dna1, $dna2);
+            return InformationTheory::hammingDistance($dna1->__toString(), $dna2->__toString());
         }
         catch (StringAreNotEqual $exception) {
             throw new InvalidArgumentException($exception->getMessage());

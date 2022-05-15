@@ -11,11 +11,11 @@ class DNAStrand
     public function count(string $nucleotideChar): int
     {
         $histogram = $this->histogram();
-        return $histogram[$nucleotideChar] ?? 0;
+        return $histogram[$nucleotideChar];
     }
 
     /**
-     * @return array
+     * @return array<int>
      */
     public function histogram(): array
     {

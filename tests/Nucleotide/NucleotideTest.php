@@ -59,4 +59,10 @@ class NucleotideTest extends TestCase
         $this->expectException(\InvalidArgumentException::class);
         Nucleotide::fromDna('JOHNYAPPLESEED');
     }
+
+    public function testValidatesShortDna(): void
+    {
+        $this->expectException(\InvalidArgumentException::class);
+        Nucleotide::fromDna('JJ');
+    }
 }
