@@ -1,4 +1,16 @@
 {
+    "name": "tomektech/biocorp",
+    "description": "BioCorp example package",
+    "keywords": [
+        "BioCorp"
+    ],
+    "authors": [
+        {
+            "name": "Tomek.tech",
+            "email": "tomek120k@gmail.com"
+        }
+    ],
+    "homepage": "https://blog.tomek.tech",
     "require-dev": {
         "phpunit/phpunit": "^9.5",
         "vimeo/psalm": "^4.23",
