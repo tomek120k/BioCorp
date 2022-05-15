@@ -9,7 +9,7 @@ class Hamming
     public static function hammingDistance(string $strand1, string $strand2)
     {
         if (self::differentLength($strand1, $strand2))
-            throw new InvalidArgumentException();
+            throw new StringAreNotEqual();
         return count(array_diff_assoc(str_split($strand1), str_split($strand2)));
     }
 

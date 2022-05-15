@@ -3,6 +3,7 @@ namespace BioCorp\Hamming;
 
 use BioCorp\Genetics\Strand;
 use BioCorp\InformationTheory\Hamming as InformationTheory;
+use BioCorp\InformationTheory\StringAreNotEqual;
 use InvalidArgumentException;
 
 class Hamming
@@ -14,8 +15,14 @@ class Hamming
      */
     public static function compute(string $strand1, string $strand2): int
     {
-        $dnaStrand1 = new Strand($strand1);
-        $dnaStrand2 = new Strand($strand2);
-        return InformationTheory::hammingDistance($dnaStrand1, $dnaStrand2);
+        $dna1 = new Strand($strand1);
+        $dna2 = new Strand($strand2);
+        try {
+            return InformationTheory::hammingDistance($dna1, $dna2);
+        }
+        catch (StringAreNotEqual $exception) {
+            throw new InvalidArgumentException($exception->getMessage());
+        }
+
     }
 }
