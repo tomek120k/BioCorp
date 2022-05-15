@@ -4,6 +4,9 @@ namespace BioCorp\Genetics;
 
 class DNAStrand
 {
+    /**
+     * @var array<string, int>
+     */
     private array $histogramTpl = ['A' => 0, 'T' => 0, 'C' => 0, 'G' => 0];
 
     /**
@@ -21,6 +24,10 @@ class DNAStrand
         return $this->dnaString;
     }
 
+    /**
+     * @param string $nucleotideChar
+     * @return int
+     */
     public function count(string $nucleotideChar): int
     {
         $histogram = $this->histogram();
@@ -28,7 +35,7 @@ class DNAStrand
     }
 
     /**
-     * @return array<int>
+     * @return array<string, int>
      */
     public function histogram(): array
     {

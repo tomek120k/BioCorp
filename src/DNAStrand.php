@@ -7,7 +7,6 @@ use BioCorp\Genetics\WrongNucleotide;
 
 class DNAStrand
 {
-    private array $histogramTpl = ['A' => 0, 'T' => 0, 'C' => 0, 'G' => 0];
     private GeneticsDNAStrand $dnaStrand;
 
     public function __construct(private readonly string $dnaString)
@@ -26,7 +25,7 @@ class DNAStrand
     }
 
     /**
-     * @return array<int>
+     * @return array<string, int>
      */
     public function histogram(): array
     {
