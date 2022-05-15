@@ -2,8 +2,6 @@
 
 namespace BioCorp\InformationTheory;
 
-use InvalidArgumentException;
-
 class Hamming
 {
     public static function hammingDistance(string $strand1, string $strand2): int

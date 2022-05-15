@@ -1,4 +1,5 @@
 <?php
+
 namespace Tests\Hamming;
 
 use BioCorp\Hamming\Hamming;
@@ -12,6 +13,9 @@ use PHPUnit\Framework\TestCase;
  */
 class HammingTest extends TestCase
 {
+    /**
+     * @return void
+     */
     public function testIdenticalStrands(): void
     {
         $this->assertEquals(0, Hamming::compute('A', 'A'));

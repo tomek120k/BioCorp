@@ -52,7 +52,7 @@ class NucleotideTest extends TestCase
     public function testCountsAllNucletides(): void
     {
         $s = 'AGCTTTTCATTCTGACTGACCGACATATGCTGTTAAAACTG';
-        $expected =   ['A' => 11, 'T' => 14, 'C' => 9, 'G' => 7];
+        $expected = ['A' => 11, 'T' => 14, 'C' => 9, 'G' => 7];
         $this->assertEquals($expected, Nucleotide::fromDna($s)->histogram());
     }
 
