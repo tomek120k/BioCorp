@@ -8,7 +8,7 @@ class DNAStrand
     {
     }
 
-    public function count(string $nucleotideChar)
+    public function count(string $nucleotideChar): int
     {
         $histogram = $this->histogram();
         return $histogram[$nucleotideChar] ?? 0;

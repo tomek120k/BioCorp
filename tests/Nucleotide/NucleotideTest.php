@@ -5,6 +5,10 @@ namespace Tests\Nucleotide;
 use BioCorp\Nucleotide;
 use PHPUnit\Framework\TestCase;
 
+/**
+ * @covers \BioCorp\Nucleotide
+ * @covers \BioCorp\DNAStrand
+ */
 class NucleotideTest extends TestCase
 {
     public function testEmptyDnyStrandHasNoAdenosine(): void
@@ -50,9 +54,9 @@ class NucleotideTest extends TestCase
         $this->assertEquals($expected, Nucleotide::fromDna($s)->histogram());
     }
 
-//    public function testValidatesDna(): void
-//    {
-//        $this->expectException(\InvalidArgumentException::class);
-//        Nucleotide::fromDna('JOHNYAPPLESEED');
-//    }
+    public function testValidatesDna(): void
+    {
+        $this->expectException(\InvalidArgumentException::class);
+        Nucleotide::fromDna('JOHNYAPPLESEED');
+    }
 }
